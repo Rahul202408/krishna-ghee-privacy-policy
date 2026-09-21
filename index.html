@@ -3,134 +3,800 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Krishna Ghee</title>
+    <title>Privacy Policy | Krishna Ghee - Pure & Vedic Dairy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2D5A27;
-            --primary-light: #EBF4E9;
-            --accent: #E5A93C;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
-            --bg: #F8FAF9;
+            --primary: #0f4a28;
+            --primary-dark: #092e19;
+            --primary-light: #1b6d3c;
+            --accent-gold: #d97706;
+            --accent-gold-light: #fbbf24;
+            --accent-gold-soft: #fef3c7;
+            --emerald-bg: #f0fdf4;
+            --surface: #ffffff;
+            --surface-glass: rgba(255, 255, 255, 0.85);
+            --border-subtle: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #94a3b8;
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            --shadow-hover: 0 12px 30px -4px rgba(15, 74, 40, 0.12);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-            padding: 24px 16px;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #f8faf9 0%, #edf5ef 100%);
+            color: var(--text-main);
+            line-height: 1.65;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 800px;
+
+        /* Top Decorative Glows */
+        .bg-glow-1 {
+            position: fixed;
+            top: -120px;
+            left: -100px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-glow-2 {
+            position: fixed;
+            top: 200px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Glass Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
             margin: 0 auto;
-            background: #ffffff;
+            border-radius: 0 0 var(--radius-md) var(--radius-md);
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            box-shadow: 0 4px 10px rgba(15, 74, 40, 0.25);
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .brand-title span {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
+        }
+
+        .lang-switch {
+            display: flex;
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: 30px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
             border-radius: 20px;
-            padding: 36px 32px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #E2E8F0;
-        }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 24px;
-            margin-bottom: 28px;
-        }
-        .header h1 { color: var(--primary); font-size: 28px; margin-bottom: 6px; }
-        .header p { color: var(--text-muted); font-size: 14px; }
-        .badge {
-            display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
             font-size: 12px;
             font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-top: 10px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        h2 {
-            color: var(--primary);
-            font-size: 18px;
-            margin-top: 24px;
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(15, 74, 40, 0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 920px;
+            margin: 24px auto 60px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #092e19 0%, #11502b 60%, #1e6d3f 100%);
+            border-radius: var(--radius-lg);
+            padding: 42px 36px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 16px 36px -10px rgba(9, 46, 25, 0.35);
+            margin-bottom: 28px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.25;
             margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
-        p, ul { font-size: 14.5px; color: #334155; margin-bottom: 14px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 6px; }
-        .contact-box {
-            background: #F0FDF4;
-            border: 1px solid #BBF7D0;
-            padding: 18px;
+
+        .hero p {
+            font-size: 15px;
+            color: #d1fae5;
+            max-width: 680px;
+            line-height: 1.6;
+        }
+
+        .meta-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 12.5px;
+            color: #a7f3d0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Quick Trust Pillars */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .trust-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 20px 18px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .trust-icon {
+            width: 44px;
+            height: 44px;
             border-radius: 12px;
+            background: var(--emerald-bg);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            border: 1px solid #bbf7d0;
+        }
+
+        .trust-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .trust-text p {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        /* Section Cards */
+        .policy-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 28px 26px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+            margin-bottom: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .policy-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 8px 24px -2px rgba(15, 23, 42, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--emerald-bg) 0%, #dcfce7 100%);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border: 1px solid #bbf7d0;
+            flex-shrink: 0;
+        }
+
+        .card-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .policy-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Custom Comparison List */
+        .check-list {
+            list-style: none;
+            margin: 14px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 14px;
+            background: #f8fafc;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .check-icon {
+            color: #10b981;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 1px;
+        }
+
+        .cross-icon {
+            color: #ef4444;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 1px;
+        }
+
+        /* Developer & Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #fefce8 100%);
+            border: 1px solid #bbf7d0;
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            margin-top: 32px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
-        .contact-box p { margin-bottom: 6px; font-weight: 500; }
+
+        .contact-badge {
+            background: #ffffff;
+            padding: 16px 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .contact-badge-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--emerald-bg);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-info h5 {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .contact-info p {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0;
+            word-break: break-all;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(15, 74, 40, 0.25);
+            transition: all 0.2s ease;
+            margin-top: 18px;
+        }
+
+        .btn-action:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(15, 74, 40, 0.35);
+        }
+
+        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 36px;
+            padding: 30px 10px 40px 10px;
             font-size: 13px;
             color: var(--text-muted);
+        }
+
+        .footer span {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Animation utilities */
+        .lang-gu {
+            display: none;
+        }
+        body.show-gu .lang-en {
+            display: none;
+        }
+        body.show-gu .lang-gu {
+            display: block;
+        }
+        body.show-gu span.lang-gu,
+        body.show-gu strong.lang-gu {
+            display: inline;
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 28px 20px;
+            }
+            .hero h1 {
+                font-size: 26px;
+            }
+            .policy-card {
+                padding: 20px 18px;
+            }
+            .navbar {
+                padding: 12px 16px;
+            }
+            .brand-title {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
 
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
+
+<!-- Top Sticky Navbar -->
+<nav class="navbar">
+    <div class="brand-wrapper">
+        <div class="brand-icon">🌿</div>
+        <div class="brand-title">
+            Krishna Ghee
+            <span class="lang-en">Official Privacy Center</span>
+            <span class="lang-gu">સત્તાવાર ગોપનીયતા નીતિ</span>
+        </div>
+    </div>
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-gu" onclick="setLanguage('gu')">ગુજરાતી</button>
+    </div>
+</nav>
+
 <div class="container">
-    <div class="header">
-        <h1>Privacy Policy</h1>
-        <p>Krishna Ghee (કૃષ્ણ ઘી) - Pure • Healthy • Traditional</p>
-        <span class="badge">Effective Date: September 2026</span>
+    <!-- Hero Banner -->
+    <div class="hero">
+        <div class="hero-badge">
+            <span>🛡️</span>
+            <span class="lang-en">Google Play Developer Policy Compliant</span>
+            <span class="lang-gu">ગૂગલ પ્લે ડેવલપર નીતિ માન્ય</span>
+        </div>
+        <h1 class="lang-en">Privacy Policy</h1>
+        <h1 class="lang-gu">પ્રાઇવસી પોલિસી (ગોપનીયતા નીતિ)</h1>
+        
+        <p class="lang-en">
+            Your trust is our highest value. We are dedicated to providing a completely transparent, safe, and privacy-respecting shopping experience for pure Vedic Desi Gir Cow and Buffalo Ghee.
+        </p>
+        <p class="lang-gu">
+            તમારો વિશ્વાસ અમારી સૌથી મોટી સંપત્તિ છે. કૃષ્ણ ઘી એપ્લિકેશન વાપરતી વખતે તમારી પ્રાઇવસી અને સુરક્ષા ૧૦૦% જળવાય રહે તે અમારી સર્વોચ્ચ પ્રાથમિકતા છે.
+        </p>
+
+        <div class="meta-strip">
+            <div class="meta-item">
+                <span>📅</span>
+                <span class="lang-en"><strong>Effective Date:</strong> September 2026</span>
+                <span class="lang-gu"><strong>અમલીકરણ તારીખ:</strong> સપ્ટેમ્બર ૨૦૨૬</span>
+            </div>
+            <div class="meta-item">
+                <span>🏢</span>
+                <span><strong>Developer:</strong> TR Tech Solutions</span>
+            </div>
+            <div class="meta-item">
+                <span>📱</span>
+                <span><strong>Package:</strong> com.tr.tech.krishnaghee</span>
+            </div>
+        </div>
     </div>
 
-    <p>
-        Welcome to <strong>Krishna Ghee</strong>, operated and developed by <strong>TR Tech Solutions</strong>. 
-        We are committed to respecting and protecting your privacy while you browse and order 100% pure Vedic Gir Cow and Buffalo Ghee.
-    </p>
-
-    <h2>1. Information We Collect</h2>
-    <p>We respect your personal privacy. Our app operates on a transparent, minimal-data model:</p>
-    <ul>
-        <li><strong>Personal Information:</strong> We do not require personal login credentials for general customers to browse products.</li>
-        <li><strong>Device Storage & Preferences:</strong> Your favorite products list and selected app language (English / Gujarati) are saved locally on your device only.</li>
-        <li><strong>Direct Communication:</strong> When you tap "Order Now" or "Contact Us" via WhatsApp or Phone dialer, communication takes place directly on WhatsApp/Phone without passing through third-party intermediary servers.</li>
-    </ul>
-
-    <h2>2. Third-Party Services</h2>
-    <p>Our application uses standard and secure third-party services for technical stability:</p>
-    <ul>
-        <li><strong>Google Firebase (Firestore):</strong> Used to load real-time product catalogs, prices, and store settings securely.</li>
-        <li><strong>ImgBB Cloud Service:</strong> Used to display optimized product photos.</li>
-    </ul>
-
-    <h2>3. Children's Privacy</h2>
-    <p>
-        Krishna Ghee does not knowingly collect personal identifiable information from children under the age of 13. 
-        The app is family-safe and purely provides agricultural dairy product catalog information.
-    </p>
-
-    <h2>4. Advertising Policy</h2>
-    <p>
-        Krishna Ghee has a <strong>Strict Zero-Ads Policy</strong>. There are no third-party banner ads, popup ads, or tracking networks embedded inside the application.
-    </p>
-
-    <h2>5. Data Security</h2>
-    <p>
-        We value your trust in using our app. Communication with cloud services is encrypted via industry-standard SSL/TLS protocols. 
-        We do not sell, trade, or rent any user data to marketing agencies.
-    </p>
-
-    <h2>6. Contact Us</h2>
-    <div class="contact-box">
-        <p>If you have any questions or suggestions about this Privacy Policy, feel free to contact us:</p>
-        <p>📧 <strong>Email:</strong> rplaystore2026@gmail.com</p>
-        <p>🏢 <strong>Developer:</strong> TR Tech Solutions</p>
-        <p>📱 <strong>Application:</strong> Krishna Ghee (com.tr.tech.krishnaghee)</p>
+    <!-- 4 Trust Highlights -->
+    <div class="trust-grid">
+        <div class="trust-card">
+            <div class="trust-icon">🚫</div>
+            <div class="trust-text">
+                <h4 class="lang-en">Zero Ads</h4>
+                <h4 class="lang-gu">કોઈ જાહેરાતો નહિ</h4>
+                <p class="lang-en">No banner or tracking ads.</p>
+                <p class="lang-gu">કોઈ સ્પામ કે બેનર એડ્સ નથી.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">🔒</div>
+            <div class="trust-text">
+                <h4 class="lang-en">100% Secure</h4>
+                <h4 class="lang-gu">૧૦૦% સુરક્ષિત</h4>
+                <p class="lang-en">No sensitive login required.</p>
+                <p class="lang-gu">પાસવર્ડ કે ડેટા સંગ્રહ નહિ.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">⚡</div>
+            <div class="trust-text">
+                <h4 class="lang-en">Direct Order</h4>
+                <h4 class="lang-gu">ડાયરેક્ટ ઓર્ડર</h4>
+                <p class="lang-en">Direct WhatsApp connection.</p>
+                <p class="lang-gu">સીધો વ્હોટ્સએપ સંપર્ક.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">👶</div>
+            <div class="trust-text">
+                <h4 class="lang-en">Family Safe</h4>
+                <h4 class="lang-gu">પરિવાર માટે સુરક્ષિત</h4>
+                <p class="lang-en">Safe for all age groups.</p>
+                <p class="lang-gu">તમામ વયજૂથ માટે યોગ્ય.</p>
+            </div>
+        </div>
     </div>
 
+    <!-- Section 1: Data Collection -->
+    <div class="policy-card">
+        <div class="card-header">
+            <div class="card-icon">📂</div>
+            <h3 class="lang-en">1. Information We Collect & Why</h3>
+            <h3 class="lang-gu">૧. માહિતી સંગ્રહ અને અમારો અભિગમ</h3>
+        </div>
+        <p class="lang-en">
+            Krishna Ghee is built around a minimal-data philosophy. We do not require you to create an account, enter credit card details on our servers, or provide sensitive device access just to explore our Vedic dairy catalog.
+        </p>
+        <p class="lang-gu">
+            કૃષ્ણ ઘી એપ્લિકેશન કોઈપણ ગ્રાહકના અંગત ડેટાની ચોરી કે અનિચ્છનીય સંગ્રહ કરતી નથી. સામાન્ય ખરીદી કે પ્રોડક્ટ્સ જોવા માટે કોઈ પાસવર્ડ કે અકાઉન્ટ બનાવવાની જરૂર રહેતી નથી.
+        </p>
+
+        <div class="check-list">
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <strong class="lang-en">Local Device Storage:</strong>
+                    <strong class="lang-gu">સ્થાનિક ફોન સ્ટોરેજ:</strong>
+                    <span class="lang-en"> Your favorite products and language choice stay solely on your phone.</span>
+                    <span class="lang-gu"> તમારી મનપસંદ પ્રોડક્ટ્સ અને ભાષા માત્ર તમારા મોબાઈલમાં જ સેવ રહે છે.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <strong class="lang-en">Direct Ordering:</strong>
+                    <strong class="lang-gu">ડાયરેક્ટ વ્હોટ્સએપ ઓર્ડર:</strong>
+                    <span class="lang-en"> Orders go straight from your WhatsApp to the registered store owner.</span>
+                    <span class="lang-gu"> ઓર્ડરની વિગતો સીધી તમારા વ્હોટ્સએપ પરથી માલિકને જાય છે.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="cross-icon">✕</span>
+                <div>
+                    <strong class="lang-en">No Passwords:</strong>
+                    <strong class="lang-gu">કોઈ પાસવર્ડ નહિ:</strong>
+                    <span class="lang-en"> We never store personal banking passwords or credentials.</span>
+                    <span class="lang-gu"> અમે કોઈપણ પ્રકારના બેંકિંગ પાસવર્ડ કે અંગત ફાઈલો લેતા નથી.</span>
+                </div>
+            </div>
+            <div class="check-item">
+                <span class="cross-icon">✕</span>
+                <div>
+                    <strong class="lang-en">No Data Selling:</strong>
+                    <strong class="lang-gu">ડેટા વેચાણ નહિ:</strong>
+                    <span class="lang-en"> Your information is never rented, shared, or sold to third parties.</span>
+                    <span class="lang-gu"> તમારો ડેટા કોઈ ત્રીજી કંપની કે એડવર્ટાઈઝરને વેચવામાં આવતો નથી.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Third-Party Infrastructure -->
+    <div class="policy-card">
+        <div class="card-header">
+            <div class="card-icon">☁️</div>
+            <h3 class="lang-en">2. Third-Party Services & Technologies</h3>
+            <h3 class="lang-gu">૨. તકનીકી સેવાઓ અને ક્લાઉડ પ્લેટફોર્મ</h3>
+        </div>
+        <p class="lang-en">
+            To ensure reliable app performance, high availability, and instant product loading, we utilize industry-standard, globally certified cloud platforms:
+        </p>
+        <p class="lang-gu">
+            એપ્લિકેશન ઝડપી અને સુરક્ષિત રીતે ચાલે તે માટે અમે વિશ્વસનીય અને સુરક્ષિત ક્લાઉડ ટેકનોલોજીનો ઉપયોગ કરીએ છીએ:
+        </p>
+        <ul style="padding-left: 20px; font-size: 13.5px; color: var(--text-muted); line-height: 1.8;">
+            <li>
+                <strong>Google Firebase (Firestore & Core):</strong> 
+                <span class="lang-en">Used strictly to fetch official live product prices, descriptions, and verified store contact details.</span>
+                <span class="lang-gu">તાજી પ્રોડક્ટ્સના લાઈવ ભાવ અને સ્ટોર વિગતો સુરક્ષિત રીતે લોડ કરવા માટે વપરાય છે.</span>
+            </li>
+            <li>
+                <strong>ImgBB Cloud Storage:</strong> 
+                <span class="lang-en">Used to deliver optimized, crystal-clear images of pure Gir cow and buffalo ghee packaging.</span>
+                <span class="lang-gu">ઘી અને પેકિંગના ફોટા સ્પષ્ટ અને ઝડપથી બતાવવા માટે વપરાય છે.</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section 3: Children's Privacy -->
+    <div class="policy-card">
+        <div class="card-header">
+            <div class="card-icon">👶</div>
+            <h3 class="lang-en">3. Children's Privacy (COPPA Compliance)</h3>
+            <h3 class="lang-gu">૩. બાળકો અને પરિવારની સુરક્ષા</h3>
+        </div>
+        <p class="lang-en">
+            Krishna Ghee is a family-safe utility focused exclusively on natural, agricultural dairy products. We do not knowingly collect or solicit any personal information from children under 13 years of age. If you believe your child has provided us with personal information, please contact us immediately so we can promptly take appropriate steps.
+        </p>
+        <p class="lang-gu">
+            કૃષ્ણ ઘી સંપૂર્ણ સાત્વિક અને કુટુંબ-ઉપયોગી એપ્લિકેશન છે. આ એપ ૧૩ વર્ષથી ઓછી ઉંમરના બાળકોનો કોઈપણ વ્યક્તિગત ડેટા એકત્રિત કરતી નથી.
+        </p>
+    </div>
+
+    <!-- Section 4: Zero Ads & Device Safety -->
+    <div class="policy-card">
+        <div class="card-header">
+            <div class="card-icon">🛡️</div>
+            <h3 class="lang-en">4. Strict Zero-Ads & Anti-Tracking Policy</h3>
+            <h3 class="lang-gu">૪. શૂન્ય જાહેરાત અને એન્ટી-ટ્રેકિંગ નીતિ</h3>
+        </div>
+        <p class="lang-en">
+            We believe your shopping experience for sacred, pure Desi ghee should be serene and uninterrupted. Our application contains:
+        </p>
+        <p class="lang-gu">
+            પવિત્ર અને શુદ્ધ દેશી ઘીની ખરીદીનો અનુભવ શાંતિપૂર્ણ રહે તે માટે અમારી નીતિ એકદમ કડક છે:
+        </p>
+        <ul style="padding-left: 20px; font-size: 13.5px; color: var(--text-muted); line-height: 1.8;">
+            <li class="lang-en">No third-party ad networks (like AdMob, Unity, or intrusive popups).</li>
+            <li class="lang-gu">કોઈપણ પ્રકારની થર્ડ-પાર્ટી જાહેરાતો (પોપ-અપ કે બેનર એડ્સ) નથી.</li>
+            <li class="lang-en">No background user behavior tracking or analytics selling.</li>
+            <li class="lang-gu">બેકગ્રાઉન્ડમાં કોઈ ટ્રેકિંગ કે જાસૂસી થતી નથી.</li>
+            <li class="lang-en">No unauthorized access to camera, microphone, or private media files.</li>
+            <li class="lang-gu">કેમેરા, માઈક્રોફોન કે પ્રાઈવેટ ફોલ્ડર્સની કોઈ બિનજરૂરી પરમિશન માંગવામાં આવતી નથી.</li>
+        </ul>
+    </div>
+
+    <!-- Section 5: Data Security & User Rights -->
+    <div class="policy-card">
+        <div class="card-header">
+            <div class="card-icon">⚖️</div>
+            <h3 class="lang-en">5. Data Retention & Your Rights</h3>
+            <h3 class="lang-gu">૫. ડેટા સુરક્ષા અને ગ્રાહકના અધિકાર</h3>
+        </div>
+        <p class="lang-en">
+            Because we do not store customer profiles or tracking cookies on external databases, you maintain 100% control over your device data. You can clear your favorites and cached preferences anytime by simply clearing app storage in your Android settings or uninstalling the app.
+        </p>
+        <p class="lang-gu">
+            તમારી તમામ મનપસંદ યાદી અને સેટિંગ્સ તમારા મોબાઈલ સેટિંગ્સમાંથી “Clear Data” કરીને અથવા એપ ડિલીટ કરીને ગમે ત્યારે સંપૂર્ણ દૂર કરી શકો છો.
+        </p>
+    </div>
+
+    <!-- Contact & Developer Section -->
+    <div class="contact-card">
+        <div class="card-header" style="border-bottom: 1px solid #dcfce7;">
+            <div class="card-icon" style="background: #ffffff;">📫</div>
+            <div>
+                <h3 class="lang-en" style="color: var(--primary-dark);">Developer & Privacy Contact</h3>
+                <h3 class="lang-gu" style="color: var(--primary-dark);">ડેવલપર અને સહાય સંપર્ક</h3>
+                <p class="lang-en" style="font-size: 12px; color: var(--text-muted); margin: 0;">Feel free to reach out for privacy queries or support.</p>
+                <p class="lang-gu" style="font-size: 12px; color: var(--text-muted); margin: 0;">કોઈપણ પ્રશ્ન કે સૂચન માટે અમારો સંપર્ક કરી શકો છો.</p>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-badge">
+                <div class="contact-badge-icon">🏢</div>
+                <div class="contact-info">
+                    <h5>Developer Agency</h5>
+                    <p>TR Tech Solutions</p>
+                </div>
+            </div>
+            <div class="contact-badge">
+                <div class="contact-badge-icon">📧</div>
+                <div class="contact-info">
+                    <h5>Official Support Email</h5>
+                    <p>tejurarahul1999@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-badge">
+                <div class="contact-badge-icon">📍</div>
+                <div class="contact-info">
+                    <h5>Headquarters</h5>
+                    <p>Gujarat, India</p>
+                </div>
+            </div>
+            <div class="contact-badge">
+                <div class="contact-badge-icon">📦</div>
+                <div class="contact-info">
+                    <h5>Application</h5>
+                    <p>Krishna Ghee</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px;">
+            <a href="mailto:tejurarahul1999@gmail.com?subject=Krishna%20Ghee%20Privacy%20Inquiry" class="btn-action">
+                <span>✉️ Contact Privacy Team</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div class="footer">
-        &copy; 2026 Krishna Ghee &bull; Developed by TR Tech Solutions. All rights reserved.
+        <p>&copy; 2026 <span>Krishna Ghee</span>. Developed by <span>TR Tech Solutions</span>.</p>
+        <p style="margin-top: 4px; font-size: 11.5px; color: var(--text-light);">All Rights Reserved &bull; Pure Vedic Tradition &bull; Crafted with care in Gujarat</p>
     </div>
 </div>
+
+<script>
+    function setLanguage(lang) {
+        if (lang === 'gu') {
+            document.body.classList.add('show-gu');
+            document.getElementById('btn-gu').classList.add('active');
+            document.getElementById('btn-en').classList.remove('active');
+        } else {
+            document.body.classList.remove('show-gu');
+            document.getElementById('btn-en').classList.add('active');
+            document.getElementById('btn-gu').classList.remove('active');
+        }
+    }
+</script>
 
 </body>
 </html>
