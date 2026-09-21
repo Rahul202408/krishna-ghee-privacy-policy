@@ -28,6 +28,6 @@ Our service does not address anyone under the age of 13. We do not knowingly col
 
 ## 6. Contact Us
 If you have any questions or concerns regarding our privacy practices:
-- **Email:** tejurarahul1999@gmail.com  
+- **Email:** rplaystore2026@gmail.com  
 - **Developer:** TR Tech Solutions  
 - **App:** Krishna Ghee  
